@@ -16,12 +16,12 @@ describe("Header component", () => {
   it("it should render without errors", () => {
     console.log(component.debug());
 
-    const wrapper = component.find(".headerComponent");
+    const wrapper = component.find(`[ data-test="headerComponent"]`);
     expect(wrapper.length).toBe(1);
   });
 
   it("it should render a logo", () => {
-    const logo = component.find(".logoIMG");
+    const logo = component.find(`[data-test='logoIMG']`);
     expect(logo.length).toBe(1);
   });
 });
